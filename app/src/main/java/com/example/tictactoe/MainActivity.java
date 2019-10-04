@@ -118,6 +118,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toast.makeText(this, "Player 1 wins!", Toast.LENGTH_SHORT).show();
         updatePointsText();
         resetBoard();
+
     }
 
     private void player2Wins() {
@@ -125,6 +126,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toast.makeText(this, "Player 2 Wins!!", Toast.LENGTH_SHORT).show();
         updatePointsText();
         resetBoard();
+
     }
 
     private void draw() {
@@ -132,8 +134,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         resetBoard();
     }
     private void updatePointsText() {
-        textViewPlayer1.setText("Player 1: " + player1Points);
-        textViewPlayer2.setText("Player 2: " + player2Points);
+        textViewPlayer1.setText("(X)Player 1: " + player1Points);
+        textViewPlayer2.setText("(0)Player 2: " + player2Points);
     }
 
     private void resetPlayerPoints(){
@@ -141,16 +143,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         player2Points=0;
         roundCount=0;
         player1Turn=true;
+        updatePointsText();
     }
 
     private void resetBoard() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                buttons[i][j].setText(" ");
+                buttons[i][j].setText("");
             }
         }
         roundCount = 0;
         player1Turn = true;
+    }
+
+    public void sendMsg(View view){
+
     }
     @Override
     protected void onSaveInstanceState(Bundle outState) {
