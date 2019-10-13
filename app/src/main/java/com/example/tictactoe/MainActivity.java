@@ -2,6 +2,7 @@ package com.example.tictactoe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         textViewPlayer1 = findViewById(R.id.text_view_p1);
         textViewPlayer2 = findViewById(R.id.text_view_p2);
 
@@ -49,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+
         if (!((Button) view).getText().toString().equals("")) {
             return;
         }
@@ -108,9 +111,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 && field[0][2].equals(field[2][0])
                 && !field[0][2].equals("")) {
             return true;
+
         }
 
         return false;
+
     }
 
     private void player1Wins() {
@@ -118,6 +123,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toast.makeText(this, "Player 1 wins!", Toast.LENGTH_SHORT).show();
         updatePointsText();
         resetBoard();
+
 
     }
 
@@ -154,10 +160,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         roundCount = 0;
         player1Turn = true;
-    }
-
-    public void sendMsg(View view){
-
     }
     @Override
     protected void onSaveInstanceState(Bundle outState) {

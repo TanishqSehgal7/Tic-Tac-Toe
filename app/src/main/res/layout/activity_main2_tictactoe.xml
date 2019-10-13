@@ -4,22 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main2ActivityTictactoe"
-    android:background="@android:color/black">
+    android:background="@android:color/black"
+    tools:context=".Main2ActivityTictactoe">
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="WELCOME TO MY TIC TAC TOE GAME"
-        android:textSize="20sp"
-        android:textStyle="bold"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:textAlignment="center"
-        android:gravity="center"
         android:background="@android:color/holo_blue_dark"
+        android:gravity="center"
+        android:text="WELCOME TO MY TIC TAC TOE GAME"
+        android:textAlignment="center"
         android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,16 +27,16 @@
         app:layout_constraintVertical_bias="0.311" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="340dp"
         android:background="@android:color/black"
-        android:onClick="sendMsg"
         android:text="START"
         android:textColor="@android:color/holo_green_light"
         android:textSize="40sp"
         android:textStyle="bold"
+        android:onClick="startGame"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
