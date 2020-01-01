@@ -29,6 +29,4 @@ public static final String SECONDACT ="com.example.tictactoe";
         Intent intent=new Intent(this,MainActivity.class);
         startActivity(intent);
     }
-
-
 }
